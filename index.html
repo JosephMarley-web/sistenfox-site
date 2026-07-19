@@ -9,7 +9,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
        
-        :root { --primary: #d4af37; }
+        :root { --primary: #00d4ff; }
        
         body { font-family: 'Inter', sans-serif; }
         .heading { font-family: 'Space Grotesk', sans-serif; }
@@ -19,13 +19,13 @@
         }
         .feature-card:hover {
             transform: translateY(-12px);
-            box-shadow: 0 25px 50px -12px rgb(212 175 55 / 0.15);
+            box-shadow: 0 25px 50px -12px rgb(0 212 255 / 0.15);
         }
         .plan-card {
             transition: all 0.3s ease;
         }
         .plan-card.popular {
-            border-color: #d4af37;
+            border-color: #00d4ff;
             transform: scale(1.05);
         }
     </style>
@@ -36,35 +36,34 @@
     <nav class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-[#d4af37] rounded-2xl flex items-center justify-center text-black font-bold text-3xl">🦊</div>
+                <div class="w-9 h-9 bg-[#00d4ff] rounded-2xl flex items-center justify-center text-black font-bold text-3xl">🦊</div>
                 <span class="heading text-3xl font-semibold tracking-tighter text-white">SISTENFOX</span>
             </div>
            
             <div class="hidden md:flex items-center gap-10 text-sm font-medium">
-                <a href="#nichos" class="nav-link hover:text-[#d4af37]">Nichos</a>
-                <a href="#beneficios" class="nav-link hover:text-[#d4af37]">Benefícios</a>
-                <a href="#planos" class="nav-link hover:text-[#d4af37]">Planos</a>
+                <a href="#nichos" class="hover:text-[#00d4ff]">Nichos</a>
+                <a href="#beneficios" class="hover:text-[#00d4ff]">Benefícios</a>
+                <a href="#planos" class="hover:text-[#00d4ff]">Planos</a>
             </div>
-            <a href="#planos"
-               class="px-8 py-3.5 bg-[#d4af37] text-black rounded-2xl font-semibold hover:bg-amber-300 transition-all">
+            <a href="#planos" class="px-8 py-3.5 bg-[#00d4ff] text-black rounded-2xl font-semibold hover:bg-cyan-300 transition-all">
                 Testar Grátis
             </a>
         </div>
     </nav>
 
-    <!-- HERO COM CARROSSEL AO LADO -->
+    <!-- HERO COM CARROSSEL -->
     <section class="hero-bg min-h-screen flex items-center pt-20">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             
-            <!-- Lado Esquerdo - Texto -->
+            <!-- Texto -->
             <div class="space-y-8">
                 <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-3xl text-sm border border-white/10">
-                    <div class="w-2 h-2 bg-[#d4af37] rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-[#00d4ff] rounded-full animate-pulse"></div>
                     SaaS Premium Multi-Nicho
                 </div>
                
                 <h1 class="heading text-6xl md:text-7xl font-bold leading-none tracking-tighter">
-                    Gerencie seu negócio<br>em <span class="text-[#d4af37]">qualquer nicho</span>
+                    Gerencie seu negócio<br>em <span class="text-[#00d4ff]">qualquer nicho</span>
                 </h1>
                
                 <p class="text-xl text-zinc-400 max-w-lg">
@@ -73,7 +72,7 @@
                
                 <div class="flex flex-wrap gap-4">
                     <a href="https://sistenfox.store" target="_blank"
-                       class="px-10 py-5 bg-[#d4af37] hover:bg-amber-300 text-black font-semibold rounded-3xl text-lg flex items-center gap-3 transition-all">
+                       class="px-10 py-5 bg-[#00d4ff] hover:bg-cyan-300 text-black font-semibold rounded-3xl text-lg flex items-center gap-3 transition-all">
                         Começar Teste Grátis
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -83,35 +82,27 @@
                 </div>
             </div>
 
-            <!-- Lado Direito - Carrossel com 3 imagens -->
+            <!-- Carrossel -->
             <div class="relative">
-                <div class="absolute -inset-10 bg-[#d4af37]/10 blur-3xl rounded-[4rem]"></div>
-                
+                <div class="absolute -inset-10 bg-[#00d4ff]/10 blur-3xl rounded-[4rem]"></div>
                 <div id="carousel" class="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
-                    <!-- Slide 1 -->
                     <div class="carousel-slide w-full h-[460px] md:h-[520px]">
                         <img src="https://picsum.photos/id/1015/900/620" class="w-full h-full object-cover" alt="Dashboard 1" />
                     </div>
-                    <!-- Slide 2 -->
                     <div class="carousel-slide w-full h-[460px] md:h-[520px] hidden">
                         <img src="https://picsum.photos/id/1025/900/620" class="w-full h-full object-cover" alt="Dashboard 2" />
                     </div>
-                    <!-- Slide 3 -->
                     <div class="carousel-slide w-full h-[460px] md:h-[520px] hidden">
                         <img src="https://picsum.photos/id/1035/900/620" class="w-full h-full object-cover" alt="Dashboard 3" />
                     </div>
 
-                    <!-- Botões -->
-                    <button id="prevBtn" 
-                        class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all">
+                    <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all">
                         <i class="fas fa-chevron-left"></i>
                     </button>
-                    <button id="nextBtn"
-                        class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all">
+                    <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all">
                         <i class="fas fa-chevron-right"></i>
                     </button>
 
-                    <!-- Indicadores -->
                     <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
                         <span class="dot w-3 h-3 bg-white/70 rounded-full cursor-pointer"></span>
                         <span class="dot w-3 h-3 bg-white/30 rounded-full cursor-pointer"></span>
@@ -155,35 +146,21 @@
         </div>
     </section>
 
-    <!-- Benefícios -->
-    <section id="beneficios" class="py-28 bg-black">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading text-5xl font-bold text-center mb-16">Benefícios para o Dono</h2>
-            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#d4af37] text-2xl">•</span>
-                    <span>Controle total da operação em tempo real</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#d4af37] text-2xl">•</span>
-                    <span>Redução de erros e desperdícios</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#d4af37] text-2xl">•</span>
-                    <span>Aumento de produtividade e lucro</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#d4af37] text-2xl">•</span>
-                    <span>Gestão completa de estoque e funcionários</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#d4af37] text-2xl">•</span>
-                    <span>Pagamentos integrados (PIX + Cartão)</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#d4af37] text-2xl">•</span>
-                    <span>Relatórios inteligentes e auditoria completa</span>
-                </div>
+    <!-- Benefícios Premium -->
+    <section id="beneficios-premium" class="max-w-6xl mx-auto px-6 py-14 bg-zinc-950">
+        <h2 class="text-3xl font-bold mb-10 text-white text-center">Benefícios Premium</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-[#0b0b10] border border-gray-700 rounded-xl p-6 hover:border-[#00d4ff] transition">
+                <h3 class="text-lg font-semibold text-white mb-2">Operação 24h Inteligente</h3>
+                <p class="text-gray-300 text-sm">O sistema trabalha por você: monitora pedidos, estoque, agenda e desempenho.</p>
+            </div>
+            <div class="bg-[#0b0b10] border border-gray-700 rounded-xl p-6 hover:border-[#00d4ff] transition">
+                <h3 class="text-lg font-semibold text-white mb-2">Automação que Aumenta Lucro</h3>
+                <p class="text-gray-300 text-sm">Alertas, relatórios e fluxos inteligentes reduzem erros e aumentam produtividade.</p>
+            </div>
+            <div class="bg-[#0b0b10] border border-gray-700 rounded-xl p-6 hover:border-[#00d4ff] transition">
+                <h3 class="text-lg font-semibold text-white mb-2">Atendimento Rápido e Profissional</h3>
+                <p class="text-gray-300 text-sm">Cardápio digital, QR Code, reservas online e notificações push.</p>
             </div>
         </div>
     </section>
@@ -194,8 +171,28 @@
             <h2 class="heading text-5xl font-bold text-center mb-4">Escolha seu Plano</h2>
             <p class="text-center text-zinc-400 mb-12">Teste grátis por 7 dias em todos os planos pagos</p>
            
-            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-                <!-- Seus planos aqui (mantidos iguais) -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
+                    <h3 class="text-2xl font-bold">Pocket Pro</h3>
+                    <div class="mt-4"><span class="text-4xl font-bold">R$ 34,50</span><span class="text-zinc-400 line-through ml-2">R$ 69,00</span></div>
+                    <button class="mt-auto w-full py-4 bg-white text-black rounded-2xl font-semibold mt-8">Testar por 7 dias</button>
+                </div>
+                <div class="plan-card popular bg-zinc-900 border border-[#00d4ff] rounded-3xl p-8 flex flex-col relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00d4ff] text-black px-6 py-1 rounded-full text-xs font-bold">MAIS POPULAR</div>
+                    <h3 class="text-2xl font-bold">Business</h3>
+                    <div class="mt-4"><span class="text-4xl font-bold">R$ 49,50</span><span class="text-zinc-400 line-through ml-2">R$ 99,00</span></div>
+                    <button class="mt-auto w-full py-4 bg-[#00d4ff] text-black rounded-2xl font-semibold mt-8">Testar por 7 dias</button>
+                </div>
+                <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
+                    <h3 class="text-2xl font-bold">Enterprise</h3>
+                    <div class="mt-4"><span class="text-4xl font-bold">R$ 74,50</span><span class="text-zinc-400 line-through ml-2">R$ 149,00</span></div>
+                    <button class="mt-auto w-full py-4 bg-white text-black rounded-2xl font-semibold mt-8">Testar por 7 dias</button>
+                </div>
+                <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
+                    <h3 class="text-2xl font-bold">Enterprise Fiscal</h3>
+                    <div class="mt-4"><span class="text-4xl font-bold">R$ 99,50</span><span class="text-zinc-400 line-through ml-2">R$ 199,00</span></div>
+                    <button class="mt-auto w-full py-4 bg-white text-black rounded-2xl font-semibold mt-8">Testar por 7 dias</button>
+                </div>
             </div>
         </div>
     </section>
@@ -205,8 +202,7 @@
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="heading text-6xl font-bold mb-6">Pronto para transformar seu negócio?</h2>
             <p class="text-2xl text-zinc-400 mb-10">Comece hoje com 7 dias grátis. Sem compromisso.</p>
-            <a href="https://sistenfox.store" target="_blank"
-               class="inline-block px-12 py-6 bg-[#d4af37] text-black text-xl font-semibold rounded-3xl hover:bg-amber-300 transition-all">
+            <a href="https://sistenfox.store" target="_blank" class="inline-block px-12 py-6 bg-[#00d4ff] text-black text-xl font-semibold rounded-3xl hover:bg-cyan-300 transition-all">
                 Iniciar Teste Grátis Agora
             </a>
         </div>
@@ -223,9 +219,7 @@
         let index = 0;
 
         function showSlide(i) {
-            slides.forEach((slide, idx) => {
-                slide.classList.toggle("hidden", idx !== i);
-            });
+            slides.forEach((slide, idx) => slide.classList.toggle("hidden", idx !== i));
             dots.forEach((dot, idx) => {
                 dot.classList.toggle("bg-white/70", idx === i);
                 dot.classList.toggle("bg-white/30", idx !== i);
@@ -241,18 +235,12 @@
             showSlide(index);
         };
 
-        // Auto-play a cada 5 segundos
         setInterval(() => {
             index = (index + 1) % slides.length;
             showSlide(index);
         }, 5000);
 
-        dots.forEach((dot, i) => {
-            dot.addEventListener("click", () => {
-                index = i;
-                showSlide(index);
-            });
-        });
+        dots.forEach((dot, i) => dot.addEventListener("click", () => { index = i; showSlide(index); }));
 
         showSlide(index);
     </script>
