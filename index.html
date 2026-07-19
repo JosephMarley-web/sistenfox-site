@@ -88,8 +88,48 @@
             </div>
         </div>
     </section>
+<section className="max-w-6xl mx-auto px-6 py-14">
+  <h2 className="text-2xl font-bold mb-6 text-white">Benefícios Premium</h2>
 
-    <!-- Nichos e Benefícios mantidos iguais (resumido) -->
+  <div className="grid md:grid-cols-3 gap-6">
+    {[
+      {
+        title: "Operação 24h Inteligente",
+        desc: "O sistema trabalha por você: monitora pedidos, estoque, agenda e desempenho mesmo quando você não está presente."
+      },
+      {
+        title: "Automação que Aumenta Lucro",
+        desc: "Alertas, relatórios e fluxos inteligentes reduzem erros, desperdícios e aumentam a produtividade da equipe."
+      },
+      {
+        title: "Atendimento Rápido e Profissional",
+        desc: "Cardápio digital, QR Code, reservas online e notificações push tornam o atendimento mais ágil e organizado."
+      },
+      {
+        title: "Controle Total da Operação",
+        desc: "Dashboard avançado com visão completa do negócio: vendas, clientes, estoque, funcionários e KPIs."
+      },
+      {
+        title: "Tecnologia de Nível Enterprise",
+        desc: "Infraestrutura moderna com sincronização offline, multi-loja, auditoria e segurança empresarial."
+      },
+      {
+        title: "Crescimento Acelerado",
+        desc: "Relatórios inteligentes ajudam você a tomar decisões estratégicas que aumentam lucro e reduzem custos."
+      }
+    ].map(card => (
+      <div
+        key={card.title}
+        className="bg-[#0b0b10] border border-gray-700 rounded-xl p-6 hover:border-[#d4af37] transition"
+      >
+        <h3 className="text-lg font-semibold text-white mb-2">{card.title}</h3>
+        <p className="text-gray-300 text-sm">{card.desc}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+        <!-- Nichos e Benefícios mantidos iguais (resumido) -->
     <section id="nichos" class="py-28 bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="heading text-5xl font-bold text-center mb-16">Nichos Suportados</h2>
@@ -122,6 +162,36 @@
         </div>
     </section>
 
+<section className="max-w-6xl mx-auto px-6 py-16">
+  <h2 className="text-3xl font-bold mb-6 text-white">Por que escolher o SISTENFOX?</h2>
+
+  <p className="text-gray-300 text-lg leading-relaxed mb-6">
+    Porque o SISTENFOX não é apenas um sistema — é um ecossistema inteligente que
+    trabalha 24 horas pelo seu negócio. Ele organiza, automatiza, monitora e
+    impulsiona cada parte da operação, seja você dono de restaurante, clínica,
+    oficina, loja ou empresa de construção civil.
+  </p>
+
+  <div className="grid md:grid-cols-2 gap-6 text-sm">
+    {[
+      "Tecnologia premium que reduz erros, desperdícios e retrabalho.",
+      "Atendimento mais rápido com cardápio digital, QR Code e reservas online.",
+      "Automação inteligente que aumenta produtividade e fideliza clientes.",
+      "Relatórios avançados que revelam oportunidades de lucro.",
+      "Controle total da operação em tempo real, de qualquer lugar.",
+      "Segurança empresarial com auditoria completa e logs de atividade.",
+      "Pagamentos integrados (PIX + cartão) e emissão fiscal opcional.",
+      "Infraestrutura moderna com sincronização offline e multi-loja."
+    ].map(item => (
+      <div key={item} className="flex items-start gap-3">
+        <span className="text-[#d4af37] text-lg">•</span>
+        <span className="text-gray-300">{item}</span>
+      </div>
+    ))}
+  </div>
+</section>
+
+    
     <!-- Planos com valores reais -->
     <section id="planos" class="py-28 bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6">
