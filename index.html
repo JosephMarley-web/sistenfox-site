@@ -312,19 +312,33 @@
         </div>
     </section>
 
-<!-- Mini Banner Fixo ao lado da seta -->
-<div class="flex items-center gap-3 mt-4">
+<!-- Banner Flutuante SISTENFOX -->
+<div id="floatingBanner"
+     class="fixed bottom-6 right-6 bg-zinc-900 border border-yellow-500/40 rounded-2xl shadow-2xl px-5 py-4 
+            flex items-center gap-4 z-50 backdrop-blur-xl">
 
-    <!-- Selo -->
-    <div class="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold">
-        50% OFF
+    <!-- Ícone -->
+    <div class="w-10 h-10 bg-[#00d4ff] rounded-xl flex items-center justify-center text-2xl">
+        🦊
     </div>
 
     <!-- Texto -->
-    <div class="text-zinc-300 text-sm">
-        Promoção válida por <span id="promoDays" class="font-bold text-yellow-400">365</span> dias
+    <div class="text-sm leading-tight">
+        <p class="text-yellow-400 font-bold">50% OFF Global</p>
+        <p class="text-zinc-300">Promoção válida por <span id="promoDays" class="font-bold">365</span> dias</p>
     </div>
 
+    <!-- Botão -->
+    <button onclick="alert('Redirecionando para o desconto...')"
+            class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-4 py-2 rounded-xl text-sm transition-all">
+        Garantir →
+    </button>
+
+    <!-- Fechar -->
+    <button onclick="document.getElementById('floatingBanner').style.display='none'"
+            class="text-zinc-400 hover:text-white text-lg ml-2">
+        ✕
+    </button>
 </div>
 
 <script>
@@ -339,14 +353,9 @@
         }
     }
 
-    // Atualiza 1 vez por dia (86400 segundos)
+    // Atualiza 1 vez por dia
     setInterval(updatePromoDays, 86400 * 1000);
 </script>
-
-
-    <footer class="py-12 border-t border-white/10 text-center text-zinc-500 text-sm">
-        SISTENFOX © 2026 • Ecossistema Multi-Nicho Premium
-    </footer>
 
     <!-- Script do Carrossel -->
     <script>
