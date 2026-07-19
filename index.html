@@ -9,13 +9,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
         
-        :root { --primary: #d4af37; }
+        :root { --primary: #00d4ff; }
         
         body { font-family: 'Inter', sans-serif; }
         .heading { font-family: 'Space Grotesk', sans-serif; }
         
         .hero-bg {
-            background: linear-gradient(135deg, #050509 0%, #1a1a2e 100%);
+            background: linear-gradient(135deg, #0a0a1f 0%, #1a2a44 100%);
             position: relative;
             overflow: hidden;
         }
@@ -25,35 +25,42 @@
         }
         .feature-card:hover {
             transform: translateY(-12px);
-            box-shadow: 0 25px 50px -12px rgb(212 175 55 / 0.15);
-        }
-        .plan-card {
-            transition: all 0.3s ease;
+            box-shadow: 0 25px 50px -12px rgb(0 212 255 / 0.15);
         }
         .plan-card.popular {
-            border-color: #d4af37;
-            transform: scale(1.05);
+            border-color: #00d4ff;
+            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.15);
+        }
+        .btn-primary {
+            background: #00d4ff;
+            color: black;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background: #00eaff;
+            transform: translateY(-2px);
         }
     </style>
 </head>
-<body class="bg-zinc-950 text-white overflow-x-hidden">
+<body class="bg-[#0a0a1f] text-white overflow-x-hidden">
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-white/10">
+    <nav class="fixed top-0 w-full z-50 bg-[#0a0a1f]/90 backdrop-blur-lg border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-[#d4af37] rounded-2xl flex items-center justify-center text-black font-bold text-3xl">🦊</div>
-                <span class="heading text-3xl font-semibold tracking-tighter text-white">SISTENFOX</span>
+                <div class="w-9 h-9 bg-[#00d4ff] rounded-2xl flex items-center justify-center text-black font-bold text-3xl">🦊</div>
+                <span class="heading text-3xl font-semibold tracking-tighter">SISTENFOX</span>
             </div>
             
             <div class="hidden md:flex items-center gap-10 text-sm font-medium">
-                <a href="#nichos" class="nav-link hover:text-[#d4af37]">Nichos</a>
-                <a href="#beneficios" class="nav-link hover:text-[#d4af37]">Benefícios</a>
-                <a href="#planos" class="nav-link hover:text-[#d4af37]">Planos</a>
+                <a href="#nichos" class="hover:text-[#00d4ff] transition">Nichos</a>
+                <a href="#beneficios" class="hover:text-[#00d4ff] transition">Benefícios</a>
+                <a href="#planos" class="hover:text-[#00d4ff] transition">Planos</a>
             </div>
 
             <a href="#contacto" 
-               class="px-8 py-3.5 bg-[#d4af37] text-black rounded-2xl font-semibold hover:bg-amber-300 transition-all">
-                Testar Grátis
+               class="px-8 py-3.5 btn-primary rounded-2xl flex items-center gap-2 transition-all">
+                <span>Testar Grátis</span>
+                <i class="fas fa-arrow-right"></i>
             </a>
         </div>
     </nav>
@@ -63,25 +70,26 @@
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div class="space-y-8">
                 <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-3xl text-sm border border-white/10">
-                    <div class="w-2 h-2 bg-[#d4af37] rounded-full animate-pulse"></div>
-                    SaaS Premium Multi-Nicho
+                    <div class="w-2 h-2 bg-[#00d4ff] rounded-full animate-pulse"></div>
+                    SaaS Premium • Desde 2018
                 </div>
                 
                 <h1 class="heading text-6xl md:text-7xl font-bold leading-none tracking-tighter">
-                    Gerencie seu negócio<br>em <span class="text-[#d4af37]">qualquer nicho</span>
+                    A Inteligência da Raposa<br>no seu <span class="text-[#00d4ff]">Negócio</span>
                 </h1>
                 
-                <p class="text-xl text-zinc-400 max-w-lg">
-                    O ecossistema inteligente para restaurantes, estética, clínicas, oficinas, varejo e construção civil.
+                <p class="text-xl text-zinc-300 max-w-lg">
+                    Ecossistema completo para restaurantes, estética, clínicas, oficinas, varejo e construção civil.
                 </p>
                 
                 <div class="flex flex-wrap gap-4">
                     <a href="https://sistenfox.store" target="_blank"
-                       class="px-10 py-5 bg-[#d4af37] hover:bg-amber-300 text-black font-semibold rounded-3xl text-lg flex items-center gap-3 transition-all">
-                        Começar Teste Grátis
-                        <i class="fas fa-arrow-right"></i>
+                       class="px-10 py-5 btn-primary rounded-3xl text-lg flex items-center gap-3 transition-all">
+                        Testar por 7 dias
+                        <span class="text-xl">🦊</span>
                     </a>
-                    <a href="#planos" class="px-10 py-5 border border-white/30 hover:bg-white/5 rounded-3xl text-lg transition-all">
+                    <a href="#planos" 
+                       class="px-10 py-5 border border-white/30 hover:bg-white/5 rounded-3xl text-lg transition-all">
                         Ver Planos
                     </a>
                 </div>
@@ -89,8 +97,8 @@
             
             <!-- Visual -->
             <div class="relative hidden md:block">
-                <div class="absolute -inset-10 bg-[#d4af37]/10 blur-3xl rounded-[4rem]"></div>
-                <div class="relative bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
+                <div class="absolute -inset-12 bg-[#00d4ff]/10 blur-3xl rounded-[5rem]"></div>
+                <div class="relative bg-zinc-900/70 border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
                     <img src="https://picsum.photos/id/1015/800/620" alt="Dashboard Sistenfox" class="w-full h-auto">
                 </div>
             </div>
@@ -98,151 +106,93 @@
     </section>
 
     <!-- Nichos -->
-    <section id="nichos" class="py-28 bg-zinc-950">
+    <section id="nichos" class="py-28 bg-[#0a0a1f]">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading text-5xl font-bold text-center mb-16">Nichos Suportados</h2>
+            <h2 class="heading text-5xl font-bold text-center mb-16 text-white">Nichos Suportados</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="feature-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
-                    <h3 class="text-2xl font-semibold mb-3">Restaurante & Café</h3>
+                <div class="feature-card bg-zinc-900/50 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#00d4ff]">Restaurante & Café</h3>
                     <p class="text-zinc-400">Mesas, comandas, cozinha, delivery e cardápio digital.</p>
                 </div>
-                <div class="feature-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
-                    <h3 class="text-2xl font-semibold mb-3">Beleza & Estética</h3>
+                <div class="feature-card bg-zinc-900/50 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#00d4ff]">Beleza & Estética</h3>
                     <p class="text-zinc-400">Agenda, profissionais, serviços e comissões.</p>
                 </div>
-                <div class="feature-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
-                    <h3 class="text-2xl font-semibold mb-3">Clínicas & Saúde</h3>
-                    <p class="text-zinc-400">Prontuários, pacientes, consultas e bloqueios.</p>
+                <div class="feature-card bg-zinc-900/50 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#00d4ff]">Clínicas & Saúde</h3>
+                    <p class="text-zinc-400">Prontuários, pacientes e agendamento.</p>
                 </div>
-                <div class="feature-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
-                    <h3 class="text-2xl font-semibold mb-3">Oficina Mecânica</h3>
-                    <p class="text-zinc-400">Ordens de serviço, peças e status de veículos.</p>
+                <div class="feature-card bg-zinc-900/50 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#00d4ff]">Oficina Mecânica</h3>
+                    <p class="text-zinc-400">Ordens de serviço, peças e veículos.</p>
                 </div>
-                <div class="feature-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
-                    <h3 class="text-2xl font-semibold mb-3">Lojas & Varejo</h3>
-                    <p class="text-zinc-400">PDV, estoque, etiquetas e promoções.</p>
+                <div class="feature-card bg-zinc-900/50 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#00d4ff]">Lojas & Varejo</h3>
+                    <p class="text-zinc-400">PDV, estoque e etiquetas.</p>
                 </div>
-                <div class="feature-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
-                    <h3 class="text-2xl font-semibold mb-3">Construção Civil</h3>
-                    <p class="text-zinc-400">Obras, equipes, materiais e cronograma.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefícios -->
-    <section id="beneficios" class="py-28 bg-black">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading text-5xl font-bold text-center mb-16">Benefícios para o Dono</h2>
-            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#d4af37] text-2xl">•</span>
-                    <span>Controle total da operação em tempo real</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#d4af37] text-2xl">•</span>
-                    <span>Redução de erros e desperdícios</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#d4af37] text-2xl">•</span>
-                    <span>Aumento de produtividade e lucro</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#d4af37] text-2xl">•</span>
-                    <span>Gestão completa de estoque e funcionários</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#d4af37] text-2xl">•</span>
-                    <span>Pagamentos integrados (PIX + Cartão)</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#d4af37] text-2xl">•</span>
-                    <span>Relatórios inteligentes e auditoria completa</span>
+                <div class="feature-card bg-zinc-900/50 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#00d4ff]">Construção Civil</h3>
+                    <p class="text-zinc-400">Obras, equipes e cronograma.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Planos -->
-    <section id="planos" class="py-28 bg-zinc-950">
+    <section id="planos" class="py-28 bg-[#0a0a1f]">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading text-5xl font-bold text-center mb-4">Escolha seu Plano</h2>
-            <p class="text-center text-zinc-400 mb-12">Teste grátis por 7 dias em todos os planos pagos</p>
+            <h2 class="heading text-5xl font-bold text-center mb-4">Planos</h2>
+            <p class="text-center text-zinc-400 mb-12">7 dias grátis • Cancele quando quiser</p>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-                <!-- Starter -->
-                <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
+                <!-- Cards de planos aqui (mesma estrutura anterior, mas com cores ciano) -->
+                <div class="plan-card bg-zinc-900/70 border border-white/10 rounded-3xl p-8 flex flex-col">
                     <h3 class="text-2xl font-bold">Starter</h3>
-                    <span class="text-[#d4af37]">Grátis</span>
-                    <ul class="mt-8 space-y-3 flex-1">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#d4af37]"></i> Dashboard básico</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#d4af37]"></i> 20 pedidos/mês</li>
-                    </ul>
-                    <button class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold">Testar</button>
+                    <span class="text-[#00d4ff]">Grátis</span>
+                    <button class="mt-auto btn-primary py-4 rounded-2xl">Testar</button>
                 </div>
 
-                <!-- Pocket Pro -->
-                <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
+                <div class="plan-card bg-zinc-900/70 border border-white/10 rounded-3xl p-8 flex flex-col">
                     <h3 class="text-2xl font-bold">Pocket Pro</h3>
-                    <span class="text-[#d4af37]">Essencial</span>
-                    <ul class="mt-8 space-y-3 flex-1">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#d4af37]"></i> Dashboard completo</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#d4af37]"></i> Cardápio digital</li>
-                    </ul>
-                    <button class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold">Testar</button>
+                    <span class="text-[#00d4ff]">Essencial</span>
+                    <button class="mt-auto btn-primary py-4 rounded-2xl">Testar</button>
                 </div>
 
-                <!-- Business (Popular) -->
-                <div class="plan-card popular bg-zinc-900 border border-[#d4af37] rounded-3xl p-8 flex flex-col relative">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#d4af37] text-black px-6 py-1 rounded-full text-sm font-bold">MAIS POPULAR</div>
+                <div class="plan-card popular bg-zinc-900/70 border border-[#00d4ff] rounded-3xl p-8 flex flex-col relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00d4ff] text-black px-6 py-1 rounded-full text-sm font-bold">POPULAR</div>
                     <h3 class="text-2xl font-bold">Business</h3>
-                    <span class="text-[#d4af37]">Recomendado</span>
-                    <ul class="mt-8 space-y-3 flex-1">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#d4af37]"></i> Reservas online</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#d4af37]"></i> Notificações push</li>
-                    </ul>
-                    <button class="mt-8 w-full py-4 bg-[#d4af37] text-black rounded-2xl font-semibold">Testar 7 dias</button>
+                    <span class="text-[#00d4ff]">Recomendado</span>
+                    <button class="mt-auto btn-primary py-4 rounded-2xl">Testar 7 dias</button>
                 </div>
 
-                <!-- Enterprise -->
-                <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
+                <div class="plan-card bg-zinc-900/70 border border-white/10 rounded-3xl p-8 flex flex-col">
                     <h3 class="text-2xl font-bold">Enterprise</h3>
-                    <span class="text-[#d4af37]">Avançado</span>
-                    <ul class="mt-8 space-y-3 flex-1">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#d4af37]"></i> Multi-loja</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#d4af37]"></i> Relatórios financeiros</li>
-                    </ul>
-                    <button class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold">Testar</button>
+                    <span class="text-[#00d4ff]">Avançado</span>
+                    <button class="mt-auto btn-primary py-4 rounded-2xl">Testar</button>
                 </div>
 
-                <!-- Enterprise Fiscal -->
-                <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
+                <div class="plan-card bg-zinc-900/70 border border-white/10 rounded-3xl p-8 flex flex-col">
                     <h3 class="text-2xl font-bold">Enterprise Fiscal</h3>
-                    <span class="text-[#d4af37]">Completo</span>
-                    <ul class="mt-8 space-y-3 flex-1">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#d4af37]"></i> Sistema fiscal completo</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#d4af37]"></i> Auditoria fiscal</li>
-                    </ul>
-                    <button class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold">Testar</button>
+                    <span class="text-[#00d4ff]">Completo</span>
+                    <button class="mt-auto btn-primary py-4 rounded-2xl">Testar</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Final -->
-    <section class="py-28 bg-gradient-to-br from-zinc-900 to-black text-center">
+    <section class="py-28 bg-gradient-to-br from-[#0a0a1f] to-[#1a2a44] text-center">
         <div class="max-w-3xl mx-auto px-6">
-            <h2 class="heading text-6xl font-bold mb-6">Pronto para transformar seu negócio?</h2>
-            <p class="text-2xl text-zinc-400 mb-10">Comece hoje com 7 dias grátis. Sem compromisso.</p>
+            <h2 class="heading text-6xl font-bold mb-6">Pronto para começar?</h2>
             <a href="https://sistenfox.store" target="_blank"
-               class="inline-block px-12 py-6 bg-[#d4af37] text-black text-xl font-semibold rounded-3xl hover:bg-amber-300 transition-all">
-                Iniciar Teste Grátis Agora
+               class="inline-block px-12 py-6 btn-primary text-xl rounded-3xl transition-all">
+                Iniciar Teste Grátis de 7 Dias
             </a>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-white/10 text-center text-zinc-500 text-sm">
-        SISTENFOX © 2026 • Ecossistema Multi-Nicho Premium
+    <footer class="py-12 text-center text-zinc-500 text-sm border-t border-white/10">
+        SISTENFOX © 2026 • Lisboa • Soluções Premium
     </footer>
 </body>
 </html>
