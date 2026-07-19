@@ -312,6 +312,38 @@
         </div>
     </section>
 
+<!-- Mini Banner Fixo ao lado da seta -->
+<div class="flex items-center gap-3 mt-4">
+
+    <!-- Selo -->
+    <div class="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold">
+        50% OFF
+    </div>
+
+    <!-- Texto -->
+    <div class="text-zinc-300 text-sm">
+        Promoção válida por <span id="promoDays" class="font-bold text-yellow-400">365</span> dias
+    </div>
+
+</div>
+
+<script>
+    // Contador de 365 dias
+    let promoDays = 365;
+    const promoDaysEl = document.getElementById("promoDays");
+
+    function updatePromoDays() {
+        if (promoDays > 0) {
+            promoDays--;
+            promoDaysEl.textContent = promoDays;
+        }
+    }
+
+    // Atualiza 1 vez por dia (86400 segundos)
+    setInterval(updatePromoDays, 86400 * 1000);
+</script>
+
+
     <footer class="py-12 border-t border-white/10 text-center text-zinc-500 text-sm">
         SISTENFOX © 2026 • Ecossistema Multi-Nicho Premium
     </footer>
