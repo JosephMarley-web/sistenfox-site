@@ -31,6 +31,7 @@
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
+
     <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
@@ -51,7 +52,7 @@
         </div>
     </nav>
 
-    <!-- Hero (mantido igual) -->
+    <!-- Hero -->
     <section class="hero-bg min-h-screen flex items-center pt-20">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div class="space-y-8">
@@ -88,48 +89,8 @@
             </div>
         </div>
     </section>
-<section className="max-w-6xl mx-auto px-6 py-14">
-  <h2 className="text-2xl font-bold mb-6 text-white">Benefícios Premium</h2>
 
-  <div className="grid md:grid-cols-3 gap-6">
-    {[
-      {
-        title: "Operação 24h Inteligente",
-        desc: "O sistema trabalha por você: monitora pedidos, estoque, agenda e desempenho mesmo quando você não está presente."
-      },
-      {
-        title: "Automação que Aumenta Lucro",
-        desc: "Alertas, relatórios e fluxos inteligentes reduzem erros, desperdícios e aumentam a produtividade da equipe."
-      },
-      {
-        title: "Atendimento Rápido e Profissional",
-        desc: "Cardápio digital, QR Code, reservas online e notificações push tornam o atendimento mais ágil e organizado."
-      },
-      {
-        title: "Controle Total da Operação",
-        desc: "Dashboard avançado com visão completa do negócio: vendas, clientes, estoque, funcionários e KPIs."
-      },
-      {
-        title: "Tecnologia de Nível Enterprise",
-        desc: "Infraestrutura moderna com sincronização offline, multi-loja, auditoria e segurança empresarial."
-      },
-      {
-        title: "Crescimento Acelerado",
-        desc: "Relatórios inteligentes ajudam você a tomar decisões estratégicas que aumentam lucro e reduzem custos."
-      }
-    ].map(card => (
-      <div
-        key={card.title}
-        className="bg-[#0b0b10] border border-gray-700 rounded-xl p-6 hover:border-[#d4af37] transition"
-      >
-        <h3 className="text-lg font-semibold text-white mb-2">{card.title}</h3>
-        <p className="text-gray-300 text-sm">{card.desc}</p>
-      </div>
-    ))}
-  </div>
-</section>
-
-        <!-- Nichos e Benefícios mantidos iguais (resumido) -->
+    <!-- Nichos -->
     <section id="nichos" class="py-28 bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="heading text-5xl font-bold text-center mb-16">Nichos Suportados</h2>
@@ -162,37 +123,95 @@
         </div>
     </section>
 
-<section className="max-w-6xl mx-auto px-6 py-16">
-  <h2 className="text-3xl font-bold mb-6 text-white">Por que escolher o SISTENFOX?</h2>
+    <!-- === NOVAS SEÇÕES ADICIONADAS === -->
+    <!-- Benefícios Premium -->
+    <section id="beneficios-premium" class="max-w-6xl mx-auto px-6 py-14">
+        <h2 class="text-3xl font-bold mb-10 text-white text-center">Benefícios Premium</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-[#0b0b10] border border-gray-700 rounded-xl p-6 hover:border-[#00d4ff] transition">
+                <h3 class="text-lg font-semibold text-white mb-2">Operação 24h Inteligente</h3>
+                <p class="text-gray-300 text-sm">
+                    O sistema trabalha por você: monitora pedidos, estoque, agenda e desempenho mesmo quando você não está presente.
+                </p>
+            </div>
+            <div class="bg-[#0b0b10] border border-gray-700 rounded-xl p-6 hover:border-[#00d4ff] transition">
+                <h3 class="text-lg font-semibold text-white mb-2">Automação que Aumenta Lucro</h3>
+                <p class="text-gray-300 text-sm">
+                    Alertas, relatórios e fluxos inteligentes reduzem erros, desperdícios e aumentam a produtividade da equipe.
+                </p>
+            </div>
+            <div class="bg-[#0b0b10] border border-gray-700 rounded-xl p-6 hover:border-[#00d4ff] transition">
+                <h3 class="text-lg font-semibold text-white mb-2">Atendimento Rápido e Profissional</h3>
+                <p class="text-gray-300 text-sm">
+                    Cardápio digital, QR Code, reservas online e notificações push tornam o atendimento mais ágil e organizado.
+                </p>
+            </div>
+            <div class="bg-[#0b0b10] border border-gray-700 rounded-xl p-6 hover:border-[#00d4ff] transition">
+                <h3 class="text-lg font-semibold text-white mb-2">Controle Total da Operação</h3>
+                <p class="text-gray-300 text-sm">
+                    Dashboard avançado com visão completa do negócio: vendas, clientes, estoque, funcionários e KPIs.
+                </p>
+            </div>
+            <div class="bg-[#0b0b10] border border-gray-700 rounded-xl p-6 hover:border-[#00d4ff] transition">
+                <h3 class="text-lg font-semibold text-white mb-2">Tecnologia de Nível Enterprise</h3>
+                <p class="text-gray-300 text-sm">
+                    Infraestrutura moderna com sincronização offline, multi-loja, auditoria e segurança empresarial.
+                </p>
+            </div>
+            <div class="bg-[#0b0b10] border border-gray-700 rounded-xl p-6 hover:border-[#00d4ff] transition">
+                <h3 class="text-lg font-semibold text-white mb-2">Crescimento Acelerado</h3>
+                <p class="text-gray-300 text-sm">
+                    Relatórios inteligentes ajudam você a tomar decisões estratégicas que aumentam lucro e reduzem custos.
+                </p>
+            </div>
+        </div>
+    </section>
 
-  <p className="text-gray-300 text-lg leading-relaxed mb-6">
-    Porque o SISTENFOX não é apenas um sistema — é um ecossistema inteligente que
-    trabalha 24 horas pelo seu negócio. Ele organiza, automatiza, monitora e
-    impulsiona cada parte da operação, seja você dono de restaurante, clínica,
-    oficina, loja ou empresa de construção civil.
-  </p>
+    <!-- Por que escolher o SISTENFOX? -->
+    <section id="porque-sistenfox" class="max-w-6xl mx-auto px-6 py-16 bg-black">
+        <h2 class="text-3xl font-bold mb-6 text-white text-center">Por que escolher o SISTENFOX?</h2>
+        <p class="text-gray-300 text-lg leading-relaxed mb-10 text-center max-w-3xl mx-auto">
+            Porque o SISTENFOX não é apenas um sistema — é um ecossistema inteligente que
+            trabalha 24 horas pelo seu negócio. Ele organiza, automatiza, monitora e
+            impulsiona cada parte da operação.
+        </p>
+        <div class="grid md:grid-cols-2 gap-6 text-sm max-w-4xl mx-auto">
+            <div class="flex items-start gap-3">
+                <span class="text-[#00d4ff] text-lg">•</span>
+                <span class="text-gray-300">Tecnologia premium que reduz erros, desperdícios e retrabalho.</span>
+            </div>
+            <div class="flex items-start gap-3">
+                <span class="text-[#00d4ff] text-lg">•</span>
+                <span class="text-gray-300">Atendimento mais rápido com cardápio digital, QR Code e reservas online.</span>
+            </div>
+            <div class="flex items-start gap-3">
+                <span class="text-[#00d4ff] text-lg">•</span>
+                <span class="text-gray-300">Automação inteligente que aumenta produtividade e fideliza clientes.</span>
+            </div>
+            <div class="flex items-start gap-3">
+                <span class="text-[#00d4ff] text-lg">•</span>
+                <span class="text-gray-300">Relatórios avançados que revelam oportunidades de lucro.</span>
+            </div>
+            <div class="flex items-start gap-3">
+                <span class="text-[#00d4ff] text-lg">•</span>
+                <span class="text-gray-300">Controle total da operação em tempo real, de qualquer lugar.</span>
+            </div>
+            <div class="flex items-start gap-3">
+                <span class="text-[#00d4ff] text-lg">•</span>
+                <span class="text-gray-300">Segurança empresarial com auditoria completa e logs de atividade.</span>
+            </div>
+            <div class="flex items-start gap-3">
+                <span class="text-[#00d4ff] text-lg">•</span>
+                <span class="text-gray-300">Pagamentos integrados (PIX + cartão) e emissão fiscal opcional.</span>
+            </div>
+            <div class="flex items-start gap-3">
+                <span class="text-[#00d4ff] text-lg">•</span>
+                <span class="text-gray-300">Infraestrutura moderna com sincronização offline e multi-loja.</span>
+            </div>
+        </div>
+    </section>
 
-  <div className="grid md:grid-cols-2 gap-6 text-sm">
-    {[
-      "Tecnologia premium que reduz erros, desperdícios e retrabalho.",
-      "Atendimento mais rápido com cardápio digital, QR Code e reservas online.",
-      "Automação inteligente que aumenta produtividade e fideliza clientes.",
-      "Relatórios avançados que revelam oportunidades de lucro.",
-      "Controle total da operação em tempo real, de qualquer lugar.",
-      "Segurança empresarial com auditoria completa e logs de atividade.",
-      "Pagamentos integrados (PIX + cartão) e emissão fiscal opcional.",
-      "Infraestrutura moderna com sincronização offline e multi-loja."
-    ].map(item => (
-      <div key={item} className="flex items-start gap-3">
-        <span className="text-[#d4af37] text-lg">•</span>
-        <span className="text-gray-300">{item}</span>
-      </div>
-    ))}
-  </div>
-</section>
-
-    
-    <!-- Planos com valores reais -->
+    <!-- Planos (mantido com valores reais) -->
     <section id="planos" class="py-28 bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
@@ -218,7 +237,7 @@
                     <button class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold">Testar por 7 dias</button>
                 </div>
 
-                <!-- Business (Mais Popular) -->
+                <!-- Business -->
                 <div class="plan-card popular bg-zinc-900 border border-[#00d4ff] rounded-3xl p-8 flex flex-col relative">
                     <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00d4ff] text-black px-6 py-1 rounded-full text-xs font-bold">MAIS POPULAR</div>
                     <h3 class="text-2xl font-bold">Business</h3>
