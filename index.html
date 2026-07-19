@@ -184,6 +184,119 @@
         dots.forEach((dot, i) => dot.addEventListener("click", () => { index = i; showSlide(index); }));
         showSlide(index);
 
+<!-- Navbar, Hero, Nichos, etc. (mantidos) -->
+
+    <!-- Planos -->
+    <section id="planos" class="py-28 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading text-5xl font-bold text-center mb-4">Escolha seu Plano</h2>
+            <p class="text-center text-zinc-400 mb-12">Teste grátis por 7 dias • Cancele quando quiser</p>
+           
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                
+                <!-- Novo Plano: Starter Free -->
+                <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
+                    <h3 class="text-2xl font-bold">Starter Free</h3>
+                    <div class="mt-4">
+                        <span class="text-4xl font-bold">R$ 0,00</span>
+                        <p class="text-sm text-emerald-400 font-medium">Plano Gratuito</p>
+                    </div>
+                    <ul class="mt-8 space-y-3 flex-1 text-sm text-zinc-300">
+                        <li>• 1 funcionário</li>
+                        <li>• Até 20 produtos</li>
+                        <li>• Dashboard básico</li>
+                        <li>• Sem compromisso</li>
+                    </ul>
+                    <a href="https://sistenfox.store/signup?plan=starter-free" 
+                       class="mt-8 w-full py-4 bg-[#00d4ff] text-black rounded-2xl font-semibold text-center hover:bg-cyan-300 transition-all">
+                       Criar Conta Grátis
+                    </a>
+                </div>
+
+                <!-- Pocket Pro -->
+                <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
+                    <h3 class="text-2xl font-bold">Pocket Pro</h3>
+                    <div class="mt-4">
+                        <span class="text-4xl font-bold">R$ 34,50</span>
+                        <span class="text-zinc-400 line-through ml-2">R$ 69,00</span>
+                    </div>
+                    <ul class="mt-8 space-y-3 flex-1 text-sm text-zinc-300">
+                        <li>• Dashboard completo</li>
+                        <li>• Controle de Pedidos</li>
+                        <li>• Cardápio Digital</li>
+                        <li>• Scanner QR</li>
+                    </ul>
+                    <a href="https://sistenfox.store/signup?plan=pocket-pro" 
+                       class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold text-center hover:bg-gray-100 transition-all">
+                       Testar por 7 dias
+                    </a>
+                </div>
+
+                <!-- Business (Popular) -->
+                <div class="plan-card popular bg-zinc-900 border border-[#00d4ff] rounded-3xl p-8 flex flex-col relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00d4ff] text-black px-6 py-1 rounded-full text-xs font-bold">MAIS POPULAR</div>
+                    <h3 class="text-2xl font-bold">Business</h3>
+                    <div class="mt-4">
+                        <span class="text-4xl font-bold">R$ 49,50</span>
+                        <span class="text-zinc-400 line-through ml-2">R$ 99,00</span>
+                    </div>
+                    <ul class="mt-8 space-y-3 flex-1 text-sm text-zinc-300">
+                        <li>• Tudo do Pocket Pro</li>
+                        <li>• Reservas Online</li>
+                        <li>• Notificações Push</li>
+                        <li>• Multi-empresas</li>
+                    </ul>
+                    <a href="https://sistenfox.store/signup?plan=business" 
+                       class="mt-8 w-full py-4 bg-[#00d4ff] text-black rounded-2xl font-semibold text-center hover:bg-cyan-300 transition-all">
+                       Testar por 7 dias
+                    </a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
+                    <h3 class="text-2xl font-bold">Enterprise</h3>
+                    <div class="mt-4">
+                        <span class="text-4xl font-bold">R$ 74,50</span>
+                        <span class="text-zinc-400 line-through ml-2">R$ 149,00</span>
+                    </div>
+                    <ul class="mt-8 space-y-3 flex-1 text-sm text-zinc-300">
+                        <li>• Tudo do Business</li>
+                        <li>• Relatórios Financeiros</li>
+                        <li>• Controle de Estoque</li>
+                        <li>• Inteligência Artificial</li>
+                    </ul>
+                    <a href="https://sistenfox.store/signup?plan=enterprise" 
+                       class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold text-center hover:bg-gray-100 transition-all">
+                       Testar por 7 dias
+                    </a>
+                </div>
+
+                <!-- Enterprise Fiscal -->
+                <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
+                    <h3 class="text-2xl font-bold">Enterprise Fiscal</h3>
+                    <div class="mt-4">
+                        <span class="text-4xl font-bold">R$ 99,50</span>
+                        <span class="text-zinc-400 line-through ml-2">R$ 199,00</span>
+                    </div>
+                    <ul class="mt-8 space-y-3 flex-1 text-sm text-zinc-300">
+                        <li>• Tudo do Enterprise</li>
+                        <li>• Sistema Fiscal Integrado</li>
+                        <li>• Pagamentos Online</li>
+                        <li>• Suporte VIP 24h</li>
+                    </ul>
+                    <a href="https://sistenfox.store/signup?plan=enterprise-fiscal" 
+                       class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold text-center hover:bg-gray-100 transition-all">
+                       Testar por 7 dias
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resto da página (CTA, Footer, etc.) -->
+</body>
+</html>
+        
         // Botão Flutuante (Topo / Final)
         const scrollBtn = document.getElementById("scrollBtn");
         let isAtBottom = false;
