@@ -1,0 +1,157 @@
+export default function SistenfoxLanding() {
+  return (
+    <div className="min-h-screen bg-[#050509] text-gray-100">
+      {/* Hero */}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          SISTENFOX Premium SaaS
+        </h1>
+        <p className="text-lg text-gray-300 mb-6">
+          Ecossistema inteligente que gerencia o seu negócio em qualquer nicho:
+          restaurantes, estética, clínicas, oficinas, varejo e construção civil.
+        </p>
+        <div className="flex gap-4">
+          <button className="bg-[#d4af37] text-black font-semibold px-6 py-3 rounded-lg">
+            Começar agora
+          </button>
+          <button className="border border-gray-600 px-6 py-3 rounded-lg">
+            Ver planos
+          </button>
+        </div>
+      </section>
+
+      {/* Nichos */}
+      <section className="max-w-6xl mx-auto px-6 py-10">
+        <h2 className="text-2xl font-bold mb-4">Nichos suportados</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            { title: "Restaurante & Café", desc: "Mesas, comandas, cozinha e delivery." },
+            { title: "Beleza & Estética", desc: "Agenda, profissionais, serviços e comissões." },
+            { title: "Clínicas & Saúde", desc: "Prontuários, pacientes, consultas e bloqueios de horário." },
+            { title: "Oficina Mecânica", desc: "Ordens de serviço, peças, orçamentos e status do veículo." },
+            { title: "Lojas & Varejo / Mercado", desc: "PDV, estoque, etiquetas e gôndolas." },
+            { title: "Construção Civil", desc: "Obras, equipes, materiais e cronograma." }
+          ].map(n => (
+            <div
+              key={n.title}
+              className="bg-[#0b0b10] border border-gray-700 rounded-xl p-4"
+            >
+              <h3 className="font-semibold text-white mb-2">{n.title}</h3>
+              <p className="text-sm text-gray-300">{n.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Benefícios */}
+      <section className="max-w-6xl mx-auto px-6 py-10">
+        <h2 className="text-2xl font-bold mb-4">Benefícios para o dono do estabelecimento</h2>
+        <div className="grid md:grid-cols-2 gap-4 text-sm">
+          {[
+            "Controle total da operação",
+            "Redução de erros e desperdícios",
+            "Aumento de produtividade",
+            "Atendimento mais rápido",
+            "Fidelização de clientes",
+            "Relatórios que aumentam lucro",
+            "Gestão de funcionários e comissões",
+            "Estoque avançado com alertas",
+            "Pagamentos integrados (PIX + cartão)",
+            "Sistema de créditos interno",
+            "Emissão fiscal (opcional)",
+            "Auditoria completa e segurança empresarial"
+          ].map(b => (
+            <div key={b} className="flex items-start gap-2">
+              <span className="text-[#d4af37] mt-1">•</span>
+              <span>{b}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Planos */}
+      <section className="max-w-6xl mx-auto px-6 py-10">
+        <h2 className="text-2xl font-bold mb-4">Planos SISTENFOX</h2>
+        <div className="grid md:grid-cols-5 gap-4 text-sm">
+          {[
+            {
+              name: "Starter",
+              tag: "Grátis",
+              points: [
+                "Dashboard básico",
+                "20 produtos / 20 pedidos/mês",
+                "1 funcionário",
+                "Validação automática a cada 90 dias"
+              ]
+            },
+            {
+              name: "Pocket Pro",
+              tag: "Profissional Essencial",
+              points: [
+                "Dashboard completo",
+                "Controle de pedidos",
+                "Cardápio digital",
+                "QR Code e modo offline"
+              ]
+            },
+            {
+              name: "Business",
+              tag: "Mais Popular",
+              points: [
+                "Tudo do Pocket Pro",
+                "Reservas online",
+                "Notificações push",
+                "Campanhas internas e produtividade"
+              ]
+            },
+            {
+              name: "Enterprise",
+              tag: "Completo",
+              points: [
+                "Tudo do Business",
+                "Relatórios financeiros",
+                "Controle de estoque avançado",
+                "Multi-loja e exportação de dados"
+              ]
+            },
+            {
+              name: "Enterprise Fiscal",
+              tag: "Máxima Segurança",
+              points: [
+                "Tudo do Enterprise",
+                "Sistema fiscal completo",
+                "Pagamentos online integrados",
+                "Conciliação e auditoria fiscal"
+              ]
+            }
+          ].map(p => (
+            <div
+              key={p.name}
+              className="bg-[#0b0b10] border border-gray-700 rounded-xl p-4 flex flex-col"
+            >
+              <h3 className="font-semibold text-white">{p.name}</h3>
+              <span className="text-xs text-[#d4af37] mb-3">{p.tag}</span>
+              <ul className="space-y-1 flex-1">
+                {p.points.map(pt => (
+                  <li key={pt} className="text-gray-300">
+                    • {pt}
+                  </li>
+                ))}
+              </ul>
+              <button className="mt-4 w-full bg-[#d4af37] text-black font-semibold py-2 rounded-lg text-xs">
+                Testar por 7 dias
+              </button>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Rodapé simples */}
+      <footer className="border-t border-gray-800 mt-10">
+        <div className="max-w-6xl mx-auto px-6 py-6 text-xs text-gray-500">
+          SISTENFOX © {new Date().getFullYear()} — Ecossistema Multi‑Nicho Premium.
+        </div>
+      </footer>
+    </div>
+  );
+}
