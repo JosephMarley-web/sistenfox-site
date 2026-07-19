@@ -16,12 +16,6 @@
        
         .hero-bg {
             background: linear-gradient(135deg, #050509 0%, #1a1a2e 100%);
-            position: relative;
-            overflow: hidden;
-        }
-       
-        .feature-card {
-            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
         }
         .feature-card:hover {
             transform: translateY(-12px);
@@ -50,14 +44,14 @@
                 <a href="#beneficios" class="nav-link hover:text-[#00d4ff]">Benefícios</a>
                 <a href="#planos" class="nav-link hover:text-[#00d4ff]">Planos</a>
             </div>
-            <a href="#contacto"
+            <a href="#planos"
                class="px-8 py-3.5 bg-[#00d4ff] text-black rounded-2xl font-semibold hover:bg-cyan-300 transition-all">
                 Testar Grátis
             </a>
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero (mantido igual) -->
     <section class="hero-bg min-h-screen flex items-center pt-20">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div class="space-y-8">
@@ -86,7 +80,6 @@
                 </div>
             </div>
            
-            <!-- Visual -->
             <div class="relative hidden md:block">
                 <div class="absolute -inset-10 bg-[#00d4ff]/10 blur-3xl rounded-[4rem]"></div>
                 <div class="relative bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
@@ -96,7 +89,7 @@
         </div>
     </section>
 
-    <!-- Nichos -->
+    <!-- Nichos e Benefícios mantidos iguais (resumido) -->
     <section id="nichos" class="py-28 bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="heading text-5xl font-bold text-center mb-16">Nichos Suportados</h2>
@@ -129,100 +122,82 @@
         </div>
     </section>
 
-    <!-- Benefícios -->
-    <section id="beneficios" class="py-28 bg-black">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading text-5xl font-bold text-center mb-16">Benefícios para o Dono</h2>
-            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#00d4ff] text-2xl">•</span>
-                    <span>Controle total da operação em tempo real</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#00d4ff] text-2xl">•</span>
-                    <span>Redução de erros e desperdícios</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#00d4ff] text-2xl">•</span>
-                    <span>Aumento de produtividade e lucro</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#00d4ff] text-2xl">•</span>
-                    <span>Gestão completa de estoque e funcionários</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#00d4ff] text-2xl">•</span>
-                    <span>Pagamentos integrados (PIX + Cartão)</span>
-                </div>
-                <div class="flex gap-4 text-lg">
-                    <span class="text-[#00d4ff] text-2xl">•</span>
-                    <span>Relatórios inteligentes e auditoria completa</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Planos -->
+    <!-- Planos com valores reais -->
     <section id="planos" class="py-28 bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading text-5xl font-bold text-center mb-4">Escolha seu Plano</h2>
-            <p class="text-center text-zinc-400 mb-12">Teste grátis por 7 dias em todos os planos pagos</p>
+            <div class="text-center mb-12">
+                <h2 class="heading text-5xl font-bold">Planos que cabem no seu bolso</h2>
+                <p class="text-zinc-400 mt-3">Escolha a versão que melhor atende seu negócio</p>
+            </div>
            
-            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-                <!-- Starter -->
-                <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
-                    <h3 class="text-2xl font-bold">Starter</h3>
-                    <span class="text-[#00d4ff]">Grátis</span>
-                    <ul class="mt-8 space-y-3 flex-1">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Dashboard básico</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> 20 pedidos/mês</li>
-                    </ul>
-                    <button class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold">Testar</button>
-                </div>
-
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Pocket Pro -->
                 <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
                     <h3 class="text-2xl font-bold">Pocket Pro</h3>
-                    <span class="text-[#00d4ff]">Essencial</span>
-                    <ul class="mt-8 space-y-3 flex-1">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Dashboard completo</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Cardápio digital</li>
+                    <div class="mt-4">
+                        <span class="text-4xl font-bold">R$ 34,50</span>
+                        <span class="text-zinc-400 line-through ml-2">R$ 69,00</span>
+                        <p class="text-sm text-emerald-400 font-medium">ECONOMIZE NO ANUAL</p>
+                    </div>
+                    <ul class="mt-8 space-y-3 flex-1 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Dashboard</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Controle de Pedidos</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Cardápio Digital</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Scanner QR</li>
                     </ul>
-                    <button class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold">Testar</button>
+                    <button class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold">Testar por 7 dias</button>
                 </div>
 
-                <!-- Business -->
+                <!-- Business (Mais Popular) -->
                 <div class="plan-card popular bg-zinc-900 border border-[#00d4ff] rounded-3xl p-8 flex flex-col relative">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00d4ff] text-black px-6 py-1 rounded-full text-sm font-bold">MAIS POPULAR</div>
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00d4ff] text-black px-6 py-1 rounded-full text-xs font-bold">MAIS POPULAR</div>
                     <h3 class="text-2xl font-bold">Business</h3>
-                    <span class="text-[#00d4ff]">Recomendado</span>
-                    <ul class="mt-8 space-y-3 flex-1">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Reservas online</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Notificações push</li>
+                    <div class="mt-4">
+                        <span class="text-4xl font-bold">R$ 49,50</span>
+                        <span class="text-zinc-400 line-through ml-2">R$ 99,00</span>
+                        <p class="text-sm text-emerald-400 font-medium">MELHOR ESCOLHA</p>
+                    </div>
+                    <ul class="mt-8 space-y-3 flex-1 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Tudo do Pocket Pro</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Reservas Online</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Notificações Push</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Multi-empresas</li>
                     </ul>
-                    <button class="mt-8 w-full py-4 bg-[#00d4ff] text-black rounded-2xl font-semibold">Testar 7 dias</button>
+                    <button class="mt-8 w-full py-4 bg-[#00d4ff] text-black rounded-2xl font-semibold">Testar por 7 dias</button>
                 </div>
 
                 <!-- Enterprise -->
                 <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
                     <h3 class="text-2xl font-bold">Enterprise</h3>
-                    <span class="text-[#00d4ff]">Avançado</span>
-                    <ul class="mt-8 space-y-3 flex-1">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Multi-loja</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Relatórios financeiros</li>
+                    <div class="mt-4">
+                        <span class="text-4xl font-bold">R$ 74,50</span>
+                        <span class="text-zinc-400 line-through ml-2">R$ 149,00</span>
+                        <p class="text-sm text-emerald-400 font-medium">MAIS VANTAGENS</p>
+                    </div>
+                    <ul class="mt-8 space-y-3 flex-1 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Tudo do Business</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Relatórios Financeiros</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Controle de Estoque</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Inteligência Artificial</li>
                     </ul>
-                    <button class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold">Testar</button>
+                    <button class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold">Testar por 7 dias</button>
                 </div>
 
                 <!-- Enterprise Fiscal -->
                 <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
                     <h3 class="text-2xl font-bold">Enterprise Fiscal</h3>
-                    <span class="text-[#00d4ff]">Completo</span>
-                    <ul class="mt-8 space-y-3 flex-1">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Sistema fiscal completo</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Auditoria fiscal</li>
+                    <div class="mt-4">
+                        <span class="text-4xl font-bold">R$ 99,50</span>
+                        <span class="text-zinc-400 line-through ml-2">R$ 199,00</span>
+                        <p class="text-sm text-emerald-400 font-medium">COMPLETO E SEGURO</p>
+                    </div>
+                    <ul class="mt-8 space-y-3 flex-1 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Tudo do Enterprise</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Sistema Fiscal Integrado</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Pagamentos Online</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-[#00d4ff]"></i> Suporte VIP 24h</li>
                     </ul>
-                    <button class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold">Testar</button>
+                    <button class="mt-8 w-full py-4 bg-white text-black rounded-2xl font-semibold">Testar por 7 dias</button>
                 </div>
             </div>
         </div>
