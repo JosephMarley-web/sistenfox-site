@@ -27,7 +27,73 @@
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
 
-    <!-- Navbar, Hero, Nichos, etc. (mantidos) -->
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-[#00d4ff] rounded-2xl flex items-center justify-center text-black font-bold text-3xl">🦊</div>
+                <span class="heading text-3xl font-semibold tracking-tighter">SISTENFOX</span>
+            </div>
+            <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+                <a href="#nichos" class="hover:text-[#00d4ff]">Nichos</a>
+                <a href="#beneficios" class="hover:text-[#00d4ff]">Benefícios</a>
+                <a href="#planos" class="hover:text-[#00d4ff]">Planos</a>
+            </div>
+            <a href="#planos" class="px-8 py-3.5 bg-[#00d4ff] text-black rounded-2xl font-semibold hover:bg-cyan-300 transition-all">
+                Testar Grátis
+            </a>
+        </div>
+    </nav>
+
+    <!-- Banner Promocional -->
+    <div class="bg-gradient-to-r from-yellow-500 via-amber-600 to-yellow-600 text-black py-3 text-center font-medium text-sm flex items-center justify-center gap-3">
+        <span class="bg-black text-white px-3 py-1 rounded-full text-xs font-bold">OPORTUNIDADE ÚNICA</span>
+        <span>Campanha Sistenfox Global! 50% de desconto em todos os planos premium</span>
+    </div>
+
+    <!-- HERO COM CARROSSEL -->
+    <section class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-3xl text-sm border border-white/10">
+                    <div class="w-2 h-2 bg-[#00d4ff] rounded-full animate-pulse"></div>
+                    SaaS Premium Multi-Nicho
+                </div>
+                <h1 class="heading text-6xl md:text-7xl font-bold leading-none tracking-tighter">
+                    Gerencie seu negócio<br>em <span class="text-[#00d4ff]">qualquer nicho</span>
+                </h1>
+                <p class="text-xl text-zinc-400 max-w-lg">
+                    O ecossistema inteligente para restaurantes, estética, clínicas, oficinas, varejo e construção civil.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://sistenfox.store" target="_blank" class="px-10 py-5 bg-[#00d4ff] hover:bg-cyan-300 text-black font-semibold rounded-3xl text-lg flex items-center gap-3 transition-all">
+                        Começar Teste Grátis
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#planos" class="px-10 py-5 border border-white/30 hover:bg-white/5 rounded-3xl text-lg transition-all">
+                        Ver Planos
+                    </a>
+                </div>
+            </div>
+
+            <!-- Carrossel -->
+            <div class="relative">
+                <div class="absolute -inset-10 bg-[#00d4ff]/10 blur-3xl rounded-[4rem]"></div>
+                <div id="carousel" class="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl h-[460px] md:h-[520px]">
+                    <div class="carousel-slide absolute inset-0">
+                        <img src="https://imglur.com/get/H3eDYM.png" alt="Dashboard 1" />
+                    </div>
+                    <div class="carousel-slide absolute inset-0 hidden">
+                        <img src="https://imglur.com/get/CBMHZ7.png" alt="Dashboard 2" />
+                    </div>
+                    <div class="carousel-slide absolute inset-0 hidden">
+                        <img src="https://imglur.com/get/oCnhcY.png" alt="Dashboard 3" />
+                    </div>
+                    <!-- Adicione mais slides aqui se quiser -->
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Planos -->
     <section id="planos" class="py-28 bg-zinc-950">
@@ -36,8 +102,8 @@
             <p class="text-center text-zinc-400 mb-12">Teste grátis por 7 dias • Cancele quando quiser</p>
            
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-                
-                <!-- Novo Plano: Starter Free -->
+
+                <!-- Starter Free -->
                 <div class="plan-card bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col">
                     <h3 class="text-2xl font-bold">Starter Free</h3>
                     <div class="mt-4">
@@ -75,7 +141,7 @@
                     </a>
                 </div>
 
-                <!-- Business (Popular) -->
+                <!-- Business -->
                 <div class="plan-card popular bg-zinc-900 border border-[#00d4ff] rounded-3xl p-8 flex flex-col relative">
                     <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00d4ff] text-black px-6 py-1 rounded-full text-xs font-bold">MAIS POPULAR</div>
                     <h3 class="text-2xl font-bold">Business</h3>
@@ -136,11 +202,7 @@
         </div>
     </section>
 
-    <!-- Resto da página (CTA, Footer, etc.) -->
-</body>
-</html>
-
-    <!-- CTA -->
+    <!-- CTA Final -->
     <section class="py-28 bg-gradient-to-br from-zinc-900 to-black text-center">
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="heading text-6xl font-bold mb-6">Pronto para transformar seu negócio?</h2>
@@ -151,149 +213,29 @@
         </div>
     </section>
 
-<!-- Banner Flutuante SISTENFOX -->
-<div id="floatingBanner"
-     class="fixed bottom-6 right-6 bg-zinc-900 border border-yellow-500/40 rounded-2xl shadow-2xl px-5 py-4 
-            flex items-center gap-4 z-50 backdrop-blur-xl">
+    <footer class="py-12 border-t border-white/10 text-center text-zinc-500 text-sm">
+        SISTENFOX © 2026 • Ecossistema Multi-Nicho Premium
+    </footer>
 
-    <!-- Ícone -->
-    <div class="w-10 h-10 bg-[#00d4ff] rounded-xl flex items-center justify-center text-2xl">
-        🦊
-    </div>
-
-    <!-- Texto -->
-    <div class="text-sm leading-tight">
-        <p class="text-yellow-400 font-bold">50% OFF Global</p>
-        <p class="text-zinc-300">Promoção válida por <span id="promoDays" class="font-bold">365</span> dias</p>
-    </div>
-
-    <!-- Botão -->
-    <button onclick="alert('Redirecionando para o desconto...')"
-            class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-4 py-2 rounded-xl text-sm transition-all">
-        Garantir →
-    </button>
-
-    <!-- Fechar -->
-    <button onclick="document.getElementById('floatingBanner').style.display='none'"
-            class="text-zinc-400 hover:text-white text-lg ml-2">
-        ✕
-    </button>
-</div>
-
-<script>
-    // Contador de 365 dias
-    let promoDays = 365;
-    const promoDaysEl = document.getElementById("promoDays");
-
-    function updatePromoDays() {
-        if (promoDays > 0) {
-            promoDays--;
-            promoDaysEl.textContent = promoDays;
-        }
-    }
-
-    // Atualiza 1 vez por dia
-    setInterval(updatePromoDays, 86400 * 1000);
-</script>
-
-    <!-- Script do Carrossel -->
+    <!-- Script do Carrossel + Contagem Regressiva -->
     <script>
-        const slides = document.querySelectorAll(".carousel-slide");
-        const dots = document.querySelectorAll(".dot");
-        let index = 0;
-
-        function showSlide(i) {
-            slides.forEach((slide, idx) => slide.classList.toggle("hidden", idx !== i));
-            dots.forEach((dot, idx) => {
-                dot.classList.toggle("bg-white/70", idx === i);
-                dot.classList.toggle("bg-white/30", idx !== i);
-            });
+        // Contagem Regressiva
+        let timeLeft = 12 * 24 * 60 * 60;
+        function updateCountdown() {
+            const days = Math.floor(timeLeft / (3600 * 24));
+            const hours = Math.floor((timeLeft % (3600 * 24)) / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById("days").textContent = String(days).padStart(2, '0');
+            document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+            document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+            if (timeLeft > 0) timeLeft--;
         }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
 
-        document.getElementById("nextBtn").onclick = () => { index = (index + 1) % slides.length; showSlide(index); };
-        document.getElementById("prevBtn").onclick = () => { index = (index - 1 + slides.length) % slides.length; showSlide(index); };
-
-        setInterval(() => {
-            index = (index + 1) % slides.length;
-            showSlide(index);
-        }, 5000);
-
-        dots.forEach((dot, i) => dot.addEventListener("click", () => { index = i; showSlide(index); }));
-
-        showSlide(index);
+        // Carrossel (adicione seu script aqui se necessário)
     </script>
 </body>
 </html>
-
-<!-- Banner de Promoção Slim -->
-<div class="max-w-3xl mx-auto px-6 py-6">
-    <div class="bg-zinc-900 border border-yellow-500/30 rounded-2xl p-6 relative overflow-hidden">
-
-        <!-- Cabeçalho -->
-        <div class="flex justify-between items-start mb-4">
-            <div>
-                <div class="inline-flex items-center gap-2 bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold">
-                    <span>🔥</span> OPORTUNIDADE ÚNICA
-                </div>
-                <h2 class="text-2xl font-bold mt-3">Campanha Sistenfox Global</h2>
-                <p class="text-zinc-400 text-sm mt-1">
-                    50% de desconto real em todos os planos premium.
-                </p>
-            </div>
-
-            <button onclick="this.parentElement.parentElement.style.display='none'" 
-                    class="text-zinc-400 hover:text-white text-lg">✕</button>
-        </div>
-
-        <!-- Planos -->
-        <div class="grid grid-cols-2 gap-4 mb-6">
-            <div class="bg-black/40 rounded-xl p-4 text-center">
-                <p class="text-xs text-zinc-400">POCKET PRO</p>
-                <p class="text-2xl font-bold text-white">R$ 34,50</p>
-            </div>
-
-            <div class="bg-black/40 rounded-xl p-4 text-center border border-yellow-400">
-                <p class="text-xs text-yellow-400">ENTERPRISE FISCAL</p>
-                <p class="text-2xl font-bold text-yellow-400">R$ 99,50</p>
-            </div>
-        </div>
-
-        <!-- Contagem Regressiva -->
-        <div class="mb-5">
-            <p class="text-xs text-zinc-400 flex items-center gap-2 mb-2">
-                <span class="text-yellow-400">⏰</span> Promoção termina em:
-            </p>
-
-            <div id="countdown" class="grid grid-cols-4 gap-2 text-center">
-                <div class="bg-black/60 rounded-lg p-2">
-                    <div id="days" class="text-xl font-bold">365</div>
-                    <div class="text-[10px] text-zinc-400">DIAS</div>
-                </div>
-                <div class="bg-black/60 rounded-lg p-2">
-                    <div id="hours" class="text-xl font-bold">08</div>
-                    <div class="text-[10px] text-zinc-400">HORAS</div>
-                </div>
-                <div class="bg-black/60 rounded-lg p-2">
-                    <div id="minutes" class="text-xl font-bold">24</div>
-                    <div class="text-[10px] text-zinc-400">MINUTOS</div>
-                </div>
-                <div class="bg-black/60 rounded-lg p-2">
-                    <div id="seconds" class="text-xl font-bold">45</div>
-                    <div class="text-[10px] text-zinc-400">SEGS</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Botão -->
-        <button onclick="alert('Redirecionando para checkout com desconto...')" 
-                class="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 rounded-xl text-base transition-all flex items-center justify-center gap-2">
-            Garantir Meu Desconto 
-            <span class="text-xl">→</span>
-        </button>
-
-        <!-- Raposa -->
-        <div class="absolute -bottom-4 -right-4 w-14 h-14 bg-[#00d4ff] rounded-full flex items-center justify-center text-3xl shadow-xl">
-            🦊
-        </div>
-    </div>
-</div>
