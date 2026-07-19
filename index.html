@@ -8,14 +8,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-      
-        :root { --primary: #00d4ff; }
-      
+       
+        :root { --primary: #d4af37; }
+       
         body { font-family: 'Inter', sans-serif; }
         .heading { font-family: 'Space Grotesk', sans-serif; }
-      
+       
         .hero-bg {
             background: linear-gradient(135deg, #050509 0%, #1a1a2e 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(212 175 55 / 0.15);
+        }
+        .plan-card {
+            transition: all 0.3s ease;
+        }
+        .plan-card.popular {
+            border-color: #d4af37;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -25,44 +36,44 @@
     <nav class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-[#00d4ff] rounded-2xl flex items-center justify-center text-black font-bold text-3xl">🦊</div>
+                <div class="w-9 h-9 bg-[#d4af37] rounded-2xl flex items-center justify-center text-black font-bold text-3xl">🦊</div>
                 <span class="heading text-3xl font-semibold tracking-tighter text-white">SISTENFOX</span>
             </div>
-          
+           
             <div class="hidden md:flex items-center gap-10 text-sm font-medium">
-                <a href="#nichos" class="hover:text-[#00d4ff]">Nichos</a>
-                <a href="#beneficios" class="hover:text-[#00d4ff]">Benefícios</a>
-                <a href="#planos" class="hover:text-[#00d4ff]">Planos</a>
+                <a href="#nichos" class="nav-link hover:text-[#d4af37]">Nichos</a>
+                <a href="#beneficios" class="nav-link hover:text-[#d4af37]">Benefícios</a>
+                <a href="#planos" class="nav-link hover:text-[#d4af37]">Planos</a>
             </div>
             <a href="#planos"
-               class="px-8 py-3.5 bg-[#00d4ff] text-black rounded-2xl font-semibold hover:bg-cyan-300 transition-all">
+               class="px-8 py-3.5 bg-[#d4af37] text-black rounded-2xl font-semibold hover:bg-amber-300 transition-all">
                 Testar Grátis
             </a>
         </div>
     </nav>
 
-           <!-- HERO COM CARROSSEL -->
+    <!-- HERO COM CARROSSEL AO LADO -->
     <section class="hero-bg min-h-screen flex items-center pt-20">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             
             <!-- Lado Esquerdo - Texto -->
             <div class="space-y-8">
                 <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-3xl text-sm border border-white/10">
-                    <div class="w-2 h-2 bg-[#00d4ff] rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-[#d4af37] rounded-full animate-pulse"></div>
                     SaaS Premium Multi-Nicho
                 </div>
-              
+               
                 <h1 class="heading text-6xl md:text-7xl font-bold leading-none tracking-tighter">
-                    Gerencie seu negócio<br>em <span class="text-[#00d4ff]">qualquer nicho</span>
+                    Gerencie seu negócio<br>em <span class="text-[#d4af37]">qualquer nicho</span>
                 </h1>
-              
+               
                 <p class="text-xl text-zinc-400 max-w-lg">
                     O ecossistema inteligente para restaurantes, estética, clínicas, oficinas, varejo e construção civil.
                 </p>
-              
+               
                 <div class="flex flex-wrap gap-4">
                     <a href="https://sistenfox.store" target="_blank"
-                       class="px-10 py-5 bg-[#00d4ff] hover:bg-cyan-300 text-black font-semibold rounded-3xl text-lg flex items-center gap-3 transition-all">
+                       class="px-10 py-5 bg-[#d4af37] hover:bg-amber-300 text-black font-semibold rounded-3xl text-lg flex items-center gap-3 transition-all">
                         Começar Teste Grátis
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -72,25 +83,22 @@
                 </div>
             </div>
 
-            <!-- Lado Direito - Carrossel -->
+            <!-- Lado Direito - Carrossel com 3 imagens -->
             <div class="relative">
-                <div class="absolute -inset-8 bg-[#00d4ff]/10 blur-3xl rounded-[3rem]"></div>
+                <div class="absolute -inset-10 bg-[#d4af37]/10 blur-3xl rounded-[4rem]"></div>
                 
-                <div id="carousel" class="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl bg-black">
-                    <!-- Slides - Todos com mesma proporção -->
+                <div id="carousel" class="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+                    <!-- Slide 1 -->
                     <div class="carousel-slide w-full h-[460px] md:h-[520px]">
-                        <img src="https://picsum.photos/id/1015/900/620" 
-                             class="w-full h-full object-cover" alt="Interface 1" />
+                        <img src="https://picsum.photos/id/1015/900/620" class="w-full h-full object-cover" alt="Dashboard 1" />
                     </div>
+                    <!-- Slide 2 -->
                     <div class="carousel-slide w-full h-[460px] md:h-[520px] hidden">
-                        <img src="https://picsum.photos/id/1025/900/620" 
-                             class="w-full h-full object-cover" alt="Interface 2" />
+                        <img src="https://picsum.photos/id/1025/900/620" class="w-full h-full object-cover" alt="Dashboard 2" />
                     </div>
-                    <!-- Imagem do Dashboard (ajustada) -->
+                    <!-- Slide 3 -->
                     <div class="carousel-slide w-full h-[460px] md:h-[520px] hidden">
-                        <img src="https://i.imgur.com/5vO8z3K.jpeg" 
-                             class="w-full h-full object-cover" 
-                             alt="Dashboard SISTENFOX" />
+                        <img src="https://picsum.photos/id/1035/900/620" class="w-full h-full object-cover" alt="Dashboard 3" />
                     </div>
 
                     <!-- Botões -->
@@ -114,8 +122,99 @@
         </div>
     </section>
 
-    <!-- Restante do conteúdo (Nichos, Benefícios, etc.) -->
-    <!-- ... mantenha as seções que você já tem ... -->
+    <!-- Nichos -->
+    <section id="nichos" class="py-28 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading text-5xl font-bold text-center mb-16">Nichos Suportados</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3">Restaurante & Café</h3>
+                    <p class="text-zinc-400">Mesas, comandas, cozinha, delivery e cardápio digital.</p>
+                </div>
+                <div class="feature-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3">Beleza & Estética</h3>
+                    <p class="text-zinc-400">Agenda, profissionais, serviços e comissões.</p>
+                </div>
+                <div class="feature-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3">Clínicas & Saúde</h3>
+                    <p class="text-zinc-400">Prontuários, pacientes, consultas e bloqueios.</p>
+                </div>
+                <div class="feature-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3">Oficina Mecânica</h3>
+                    <p class="text-zinc-400">Ordens de serviço, peças e status de veículos.</p>
+                </div>
+                <div class="feature-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3">Lojas & Varejo</h3>
+                    <p class="text-zinc-400">PDV, estoque, etiquetas e promoções.</p>
+                </div>
+                <div class="feature-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-3">Construção Civil</h3>
+                    <p class="text-zinc-400">Obras, equipes, materiais e cronograma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section id="beneficios" class="py-28 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading text-5xl font-bold text-center mb-16">Benefícios para o Dono</h2>
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="flex gap-4 text-lg">
+                    <span class="text-[#d4af37] text-2xl">•</span>
+                    <span>Controle total da operação em tempo real</span>
+                </div>
+                <div class="flex gap-4 text-lg">
+                    <span class="text-[#d4af37] text-2xl">•</span>
+                    <span>Redução de erros e desperdícios</span>
+                </div>
+                <div class="flex gap-4 text-lg">
+                    <span class="text-[#d4af37] text-2xl">•</span>
+                    <span>Aumento de produtividade e lucro</span>
+                </div>
+                <div class="flex gap-4 text-lg">
+                    <span class="text-[#d4af37] text-2xl">•</span>
+                    <span>Gestão completa de estoque e funcionários</span>
+                </div>
+                <div class="flex gap-4 text-lg">
+                    <span class="text-[#d4af37] text-2xl">•</span>
+                    <span>Pagamentos integrados (PIX + Cartão)</span>
+                </div>
+                <div class="flex gap-4 text-lg">
+                    <span class="text-[#d4af37] text-2xl">•</span>
+                    <span>Relatórios inteligentes e auditoria completa</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="py-28 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading text-5xl font-bold text-center mb-4">Escolha seu Plano</h2>
+            <p class="text-center text-zinc-400 mb-12">Teste grátis por 7 dias em todos os planos pagos</p>
+           
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Seus planos aqui (mantidos iguais) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-28 bg-gradient-to-br from-zinc-900 to-black text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="heading text-6xl font-bold mb-6">Pronto para transformar seu negócio?</h2>
+            <p class="text-2xl text-zinc-400 mb-10">Comece hoje com 7 dias grátis. Sem compromisso.</p>
+            <a href="https://sistenfox.store" target="_blank"
+               class="inline-block px-12 py-6 bg-[#d4af37] text-black text-xl font-semibold rounded-3xl hover:bg-amber-300 transition-all">
+                Iniciar Teste Grátis Agora
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/10 text-center text-zinc-500 text-sm">
+        SISTENFOX © 2026 • Ecossistema Multi-Nicho Premium
+    </footer>
 
     <!-- Script do Carrossel -->
     <script>
@@ -124,7 +223,9 @@
         let index = 0;
 
         function showSlide(i) {
-            slides.forEach((slide, idx) => slide.classList.toggle("hidden", idx !== i));
+            slides.forEach((slide, idx) => {
+                slide.classList.toggle("hidden", idx !== i);
+            });
             dots.forEach((dot, idx) => {
                 dot.classList.toggle("bg-white/70", idx === i);
                 dot.classList.toggle("bg-white/30", idx !== i);
@@ -140,10 +241,11 @@
             showSlide(index);
         };
 
+        // Auto-play a cada 5 segundos
         setInterval(() => {
             index = (index + 1) % slides.length;
             showSlide(index);
-        }, 4000);
+        }, 5000);
 
         dots.forEach((dot, i) => {
             dot.addEventListener("click", () => {
